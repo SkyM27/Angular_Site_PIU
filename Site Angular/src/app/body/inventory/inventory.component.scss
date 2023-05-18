@@ -1,0 +1,68 @@
+.body {
+    background-color: #0f0f0f;
+}
+
+.body button {
+    background-color: #500101;
+    height: 40px;
+    margin-left: 20px;
+    margin-top: 80px;
+}
+
+.items {
+    margin-top: 5px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    max-width: 350px;
+    color: #FCFCFC;
+    background: rgba(20, 20, 20, 0.835);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.quantity {
+    font-size: 18px;
+}
+
+.description {
+    font-size: 16px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    margin-right: 30px;
+    border-radius: 10px;
+}
+
+.buttons button {
+    margin-left: 20px;
+}
+
+.buttons :last-child {
+    background-color: #ffffff;
+    color: black;
+}
+
+.buttons :first-child {
+    background-color:#500101;
+    color: rgb(255, 255, 255);
+}

@@ -1,0 +1,23 @@
+<body>
+    <div class="full"></div>
+    <div class="form" [formGroup]="form">
+        <h1>Contact</h1>
+        <mat-form-field appearance="fill">
+            <mat-label>Name</mat-label>
+            <input matInput type="text" formControlName="name" placeholder="Name" required>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Email</mat-label>
+            <input matInput type="text" formControlName="email" placeholder="Email" required>
+        </mat-form-field>
+
+        <mat-form-field>
+            <textarea matInput name="questionText" formControlName="question" cols="35" rows="8"
+                placeholder="Question Text" required></textarea>
+        </mat-form-field>
+        <div class="box-3">
+            <div class="send_button" (click)="sendQuestion()"><span>Send</span></div>
+        </div>
+    </div>
+</body>

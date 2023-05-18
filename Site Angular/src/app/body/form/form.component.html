@@ -1,0 +1,18 @@
+<h1 mat-dialog-title>Create or Edit Item</h1>
+<div class="form" [formGroup]="form">
+    <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput type="text" formControlName="name" placeholder="Name">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Number</mat-label>
+        <input matInput type="text" formControlName="number" placeholder="Number">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Category</mat-label>
+        <input matInput type="text" formControlName="category" placeholder="category">
+    </mat-form-field>
+    <button mat-raised-button color="accent" (click)="saveNewItem()">SAVE</button>
+</div>

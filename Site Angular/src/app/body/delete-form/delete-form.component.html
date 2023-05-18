@@ -1,0 +1,8 @@
+<h1 mat-dialog-title>Delete Item</h1>
+<div class="form" [formGroup]="form">
+    <mat-form-field appearance="fill">
+        <mat-label>Delete Item</mat-label>
+        <input matInput type="text" formControlName="delete" placeholder="Enter the name to confirm:">
+    </mat-form-field>
+    <button mat-raised-button color="accent" (click)="deletItem()">CONFIRM</button>
+</div>

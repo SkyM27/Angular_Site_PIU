@@ -1,0 +1,14 @@
+<div class="body">
+    <button mat-raised-button class="add__item" (click)="openDialog(0)">Add Item<mat-icon>library_add</mat-icon></button>
+    <div class="items">
+      <div *ngFor="let item of itemList" class="item">
+        <p class="name">Nume: {{ item.name }}</p>
+        <p class="quantity">Cantitate: {{ item.number }}</p>
+        <p claas="description">Descriere: {{ item.category }}</p>
+        <div class="buttons">
+          <button mat-raised-button class="delete" (click)="openDelDialog(item.id, item.name)">Delete</button>
+          <button mat-raised-button class="edit" (click)="openDialog(item.id)">Edit</button>
+        </div>
+      </div>
+    </div>
+</div>
