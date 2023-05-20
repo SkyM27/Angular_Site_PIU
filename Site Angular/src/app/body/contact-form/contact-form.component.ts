@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-
+import { HeaderComponent } from 'src/app/header/header.component';
 
 @Component({
   selector: 'app-contact-form',
   templateUrl: './contact-form.component.html',
-  styleUrls: ['./contact-form.component.scss']
+  styleUrls: ['./contact-form.component.scss', '../../header/header.component.scss']
 })
 export class ContactFormComponent implements OnInit {
   constructor(private formBuilder: FormBuilder) { }

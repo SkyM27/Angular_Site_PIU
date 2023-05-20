@@ -1,21 +1,22 @@
-<nav [className]="home? 'nav_bar is_active' : 'nav_bar'">
-    <a href="/" class="nav_logo" (mouseover)="playHoverSound()"> Umbrella</a>
+<nav [className]="home ? 'nav_bar is_active' : 'nav_bar'">
+    <a href="/" class="nav_logo" (mouseover)="playHoverSound()">Umbrella</a>
     <div class="special_links">
-        <a href='/' (mouseover)="playHoverSound()">Home</a>
-        <a (click)="GoToInventory()" (mouseover)="playHoverSound()">Inventory</a>
-        <a href="/contact"(mouseover)="playHoverSound()">Contact</a>
+      <a (click)="GoToHome()" (mouseenter)="playHoverSound()" (click)="playClickSound()">Home</a>
+      <a (click)="GoToInventory()" (mouseenter)="playHoverSound()" (click)="playClickSound()">Inventory</a>
+      <a (click)="GoToContact()" (mouseenter)="playHoverSound()" (click)="playClickSound()">Contact</a>
     </div>
     <a class="nav_btn" target="_blank" (click)="switchToggle()">
-        <div [className]="toggle? 'one is_active' : 'one'"></div>
-        <div [className]="toggle? 'two is_active' : 'two'"></div>
-        <div [className]="toggle? 'three is_active' : 'three'"></div>
+      <div [className]="toggle ? 'one is_active' : 'one'"></div>
+      <div [className]="toggle ? 'two is_active' : 'two'"></div>
+      <div [className]="toggle ? 'three is_active' : 'three'"></div>
     </a>
-</nav>
-
-<div [className]="toggle? 'min_lnk active' : 'min_lnk'">
-    <a href="/">Home</a>
+  </nav>
+  
+  <div [className]="toggle ? 'min_lnk active' : 'min_lnk'">
+    <a (click)="GoToHome()" (mouseenter)="playHoverSound()" (click)="playClickSound()">Home</a>
     <hr>
-    <a href="/inventory">Inventory</a>
+    <a (click)="GoToInventory()" (mouseenter)="playHoverSound()" (click)="playClickSound()">Inventory</a>
     <hr>
-    <a href="/contact">Contact</a>
-</div>
+    <a (click)="GoToContact()" (mouseenter)="playHoverSound()" (click)="playClickSound()">Contact</a>
+  </div>
+  

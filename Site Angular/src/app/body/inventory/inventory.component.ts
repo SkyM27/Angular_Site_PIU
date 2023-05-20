@@ -4,12 +4,12 @@ import { FormComponent } from '../form/form.component';
 import { ItemService } from 'src/app/services/item.service';
 import { Item } from 'src/models/item';
 import { DeleteFormComponent } from '../delete-form/delete-form.component';
-
+import { HeaderComponent } from 'src/app/header/header.component';
 
 @Component({
-  selector: 'app-inventory',
+  selector: 'app-inventory', 
   templateUrl: './inventory.component.html',
-  styleUrls: ['./inventory.component.scss']
+  styleUrls: ['./inventory.component.scss', '../../header/header.component.scss']
 })
 export class InventoryComponent implements OnInit {
   error?: string;
