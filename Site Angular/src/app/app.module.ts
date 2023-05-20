@@ -44,6 +44,7 @@ import { ContactFormComponent } from './body/contact-form/contact-form.component
     MatFormFieldModule,
     AnimateOnScrollModule,
     NgChartsModule,
+
   ],
   providers: [ScrollService],
   bootstrap: [AppComponent]
