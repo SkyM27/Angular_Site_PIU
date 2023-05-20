@@ -45,7 +45,6 @@ export class HomeComponent implements OnInit, OnDestroy{
   }
 
   ngOnDestroy(): void {
-    // Stop the hover sound when the component is destroyed
     this.hoverSound?.stop();
   }
 

@@ -1,13 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
 import { Location } from '@angular/common';
+import { Howl, Howler } from 'howler';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit, OnDestroy {
   public url?: string;
   home = false;
   constructor (private location: Location, private router: Router) {
@@ -19,6 +20,8 @@ export class HeaderComponent implements OnInit {
   switchToggle() {
     this.toggle = !this.toggle;
   }
+
+  hoverSound!: Howl;
 
   ngOnInit(): void {
     this.router.events.subscribe(() => {
@@ -38,5 +41,12 @@ export class HeaderComponent implements OnInit {
 
   GoToInventory(){
     this.router.navigate(['inventory'])
+  }
+
+  ngOnDestroy(): void {
+    this.hoverSound?.stop();
+  }
+  playHoverSound(): void {
+    this.hoverSound?.play();
   }
 }
