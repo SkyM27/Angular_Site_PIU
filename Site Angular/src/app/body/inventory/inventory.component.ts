@@ -15,11 +15,13 @@ export class InventoryComponent implements OnInit {
   itemList!: Item[];
   id: number = 2;
 
+  loading: boolean = true;
   constructor(public dialog: MatDialog, public itemService: ItemService) {}
 
   getItems(): void {
     this.itemService.getItems().subscribe((list:Item[]) => {
       this.itemList = list
+      this.loading = false;
     }, (err) => {
         this.error = err.message;
     })

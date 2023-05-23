@@ -1,7 +1,6 @@
-<app-header></app-header>
 <div class="body">
-  <button mat-raised-button class="add__item" (click)="openDialog(0)">Add Item<mat-icon>library_add</mat-icon></button>
-  <div class="items">
+  <button *ngIf="!loading" mat-raised-button class="add__item" (click)="openDialog(0)">Add Item<mat-icon>library_add</mat-icon></button>
+  <div  *ngIf="!loading" class="items">
     <div *ngFor="let item of itemList" class="item">
       <p class="name">Nume: {{ item.name }}</p>
       <p class="quantity">Cantitate: {{ item.number }}</p>
@@ -12,5 +11,14 @@
       </div>
     </div>
   </div>
+  <div *ngIf="loading" class="loading">
+    <span class = 'stroke'></span>
+    <span class = 'stroke'></span>
+    <span class = 'stroke'></span>
+    <span class = 'stroke'></span>
+    <span class = 'stroke'></span>
+    <span class = 'stroke'></span>
+    <span class = 'stroke'></span>
+  </div>
+  <div *ngIf="loading" class='loading_text'>Loading</div>  
 </div>
-
